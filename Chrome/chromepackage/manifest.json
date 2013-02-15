@@ -1,0 +1,9 @@
+{
+  "name": "CoffeeDesktop-wrapper",
+  "version": "${FBSTRING_PLUGIN_VERSION}",
+  "description": "CoffeeDesktop server wrapper",
+
+	"plugins": [
+    { "path": "npcdw.dll", "public": true }
+  ]
+}
