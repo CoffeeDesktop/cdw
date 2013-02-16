@@ -32,6 +32,7 @@ public:
         m_plugin(plugin), m_host(host)
     {
         registerMethod("echo",      make_method(this, &cdwAPI::echo));
+        registerMethod("startServer",      make_method(this, &cdwAPI::startServer));
         registerMethod("testEvent", make_method(this, &cdwAPI::testEvent));
         
         // Read-write property
@@ -66,10 +67,12 @@ public:
 
     // Method echo
     FB::variant echo(const FB::variant& msg);
+    FB::variant startServer(const FB::variant& msg);
     
     // Event helpers
     FB_JSAPI_EVENT(test, 0, ());
     FB_JSAPI_EVENT(echo, 2, (const FB::variant&, const int));
+    FB_JSAPI_EVENT(startServer, 2, (const FB::variant&, const int));
 
     // Method test-event
     void testEvent();

@@ -26,6 +26,13 @@ FB::variant cdwAPI::echo(const FB::variant& msg)
     return msg;
 }
 
+FB::variant cdwAPI::startServer(const FB::variant& msg)
+{
+    system("screen -dmS server http-server ~/coffeedesktop/");
+
+    // return "foobar";
+    return msg;
+}
 ///////////////////////////////////////////////////////////////////////////////
 /// @fn cdwPtr cdwAPI::getPlugin()
 ///
